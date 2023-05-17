@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center">
+    <div>
+        <p (click)="toogleSubDomains()">{{name}}</p>
+    </div>
+    <ul *ngIf="toogleDomains">
+        <li *ngFor="let domain of domains | async">
+            
+            <app-sub-domain [domainName]="name" name="{{domain.subdomain_name}}"></app-sub-domain>
+        </li>
+    </ul>
+    <div>
+        <form *ngIf="showEditForm" [formGroup]="EditForm">
+            <input type="text" class="form-control" placeholder="Enter new domain name" formControlName="domain_name">
+        </form>
+        <button *ngIf="showEditForm" (click)="handleSave()" class="btn btn-outline-success">Save</button>
+        <button *ngIf="!toogleDomains" (click)="handleClick()" class="btn btn-outline-dark">{{showEditForm? 'cancel' : 'Edit'}}</button>
+    </div>
+    
+</div>

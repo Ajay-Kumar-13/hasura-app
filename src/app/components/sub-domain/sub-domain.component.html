@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center">
+    <p>{{name}} <a (click)="handleEdit()">Edit</a></p>
+    <div *ngIf="toogleForm">
+        <form [formGroup]="EditForm">
+            <input type="text" class="form-control" placeholder="Enter new sub-domain name" formControlName="sub_domain_name">
+        </form>
+        <button (click)="handleSave()" class="btn btn-outline-success">Save</button>
+        <button (click)="handleEdit()" class="btn btn-outline-dark">{{toogleForm? 'cancel' : 'Edit'}}</button>
+    </div>
+</div>
+

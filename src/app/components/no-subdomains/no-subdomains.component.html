@@ -1,0 +1,6 @@
+<h1>All Domains with No Subdomains</h1>
+
+<div *ngFor="let domain of domains | async">
+    <app-domain name="{{domain.domain_name}}"></app-domain>
+    <!-- <button (click)="handleClick()" class="btn btn-outline-secondary">Edit</button> -->
+</div>

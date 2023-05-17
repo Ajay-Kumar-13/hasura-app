@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let domain of domains | async">
+        {{domain.domain_name}}
+        <button class="btn btn-outline-secondary">Edit</button>
+    </li>
+</ul>

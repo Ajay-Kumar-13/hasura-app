@@ -1,0 +1,11 @@
+<h1>All Domains</h1>
+
+<div class="domain" *ngFor="let domain of domains | async">
+    <ul>
+        <li>
+            <app-domain name="{{domain.domain_name}}"></app-domain>
+        </li>
+    </ul>   
+    
+    <!-- <button (click)="handleClick()" class="btn btn-outline-secondary">Edit</button> -->
+</div>
