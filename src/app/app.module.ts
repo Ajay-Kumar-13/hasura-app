@@ -13,13 +13,15 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DomainComponent } from './components/domain/domain.component';
 import { SubDomainComponent } from './components/sub-domain/sub-domain.component';
+import { SubDomainsComponent } from './components/sub-domains/sub-domains.component';
 
 const appRoutes: Routes = [
   {path:"domains", component: DomainsComponent },
   {path:"domains/three", component: ThreeComponent},
   {path:"domains/two-subdomains", component: TwoSubdomainsComponent},
   {path:"domains/add", component: AddComponent},
-  {path:"domains/no-subdomains", component: NoSubdomainsComponent}
+  {path:"domains/no-subdomains", component: NoSubdomainsComponent},
+  {path: "domains/:domain-id/subdomains", component: SubDomainsComponent}
 ]
 
 @NgModule({
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     AddComponent,
     NoSubdomainsComponent,
     DomainComponent,
-    SubDomainComponent
+    SubDomainComponent,
+    SubDomainsComponent
   ],
   imports: [
     BrowserModule,

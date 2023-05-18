@@ -4,9 +4,12 @@
     </div>
     <ul *ngIf="toogleDomains">
         <li *ngFor="let domain of domains | async">
-            
             <app-sub-domain [domainName]="name" name="{{domain.subdomain_name}}"></app-sub-domain>
         </li>
+        <button  class="btn btn-outline-success" (click)="handleAdd()">Add</button>
+        <div >
+            {{domain_id}}
+        </div>
     </ul>
     <div>
         <form *ngIf="showEditForm" [formGroup]="EditForm">
