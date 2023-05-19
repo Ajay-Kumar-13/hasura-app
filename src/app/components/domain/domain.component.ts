@@ -3,7 +3,8 @@ import { Apollo } from 'apollo-angular';
 import { gql } from 'apollo-angular';
 import {Observable, of} from 'rxjs';
 import { map,filter } from 'rxjs/operators';
-import {FormControl, FormGroup, Validators} from '@angular/forms';import { Router } from '@angular/router';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { RouteService } from 'src/app/services/route.service';
 
 

@@ -5,5 +5,9 @@
             {{domain.subdomain_name}}
         </li>
     </ul>
-    <button class="btn btn-outline-success">Add Sub Domain</button>
+    <button (click)="addSubDomain()" class="btn btn-outline-success">Add Sub Domain</button>
+    <form *ngIf="toogleAddForm" [formGroup]="EditForm">
+        <input type="text" class="mt-3 form-control" formControlName="sub_domain_name" placeholder="Enter New Sub-domain">
+        <button class="btn btn-outline-success mt-3" (click)="handleSave()">Save</button>
+    </form>
 </div>
